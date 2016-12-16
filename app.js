@@ -29,10 +29,11 @@ describe("Object functions", function() {
     var volume = function() {
     // BEGIN (write your solution here)
 
-    return this.calculateVolume = this.heigth * this.width * this.length;
-   
-  };
-
+    box1.calculateVolume = this.height * this.width * this.length,
+    box2.calculateVolume = this.heigth * this.width * this.length,
+    box3.calculateVolume = this.heigth * this.width * this.length;
+     return volume();
+    };
 
 
     // END
