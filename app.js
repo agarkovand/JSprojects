@@ -1,49 +1,30 @@
-/* global require describe it */
-
-var assert = require("assert");
-
-describe("Object functions", function() {
-  var randomInt = function () {
-
-  }
-
-  it("calculates the volume of boxes", function() {
-    var box1 = {
-      height: randomInt(),
-      width: randomInt(),
-      length: randomInt()
-    };
-
-    var box2 = {
-      height: randomInt(),
-      width: randomInt(),
-      length: randomInt()
-    };
-
-    var box3 = {
-      height: randomInt(),
-      width: randomInt(),
-      length: randomInt()
-    };
-
-    var volume = function() {
+it("should create instance of Object", function() {
     // BEGIN (write your solution here)
+ function Computer(weight, cpu, videocard) {
+       this.weight = "weight";
+         this.cpu = "cpu";
+         this.videocard = "videocard";
+         var mycomp = new Computer();
+       return mycomp(weight, cpu, videocard);
+ }
+   var Intel = function() {
+     weight.Intel = this.weight;
+     cpu.Intel = this.cpu;
+     videocard.Intel = this.videocard;
+     var mac = new Intel();
 
-    box1.calculateVolume = this.height * this.width * this.length,
-    box2.calculateVolume = this.heigth * this.width * this.length,
-    box3.calculateVolume = this.heigth * this.width * this.length;
-     return volume();
-    };
-
-
+   if (mac instanceof Computer)
+   console.log ("true");
+  
     // END
 
-    box1.calculateVolume = volume;
-    box2.calculateVolume = volume;
-    box3.calculateVolume = volume;
+  var mac = new Computer();
 
-    assert.equal(box1.calculateVolume(), box1.height * box1.width * box1.length);
-    assert.equal(box2.calculateVolume(), box2.height * box2.width * box2.length);
-    assert.equal(box3.calculateVolume(), box3.height * box3.width * box3.length);
+    assert.equal(typeof Computer, 'function');
+    assert.notEqual(mac instanceof Computer, true);
+    assert.notEqual(Object.getPrototypeOf(mac), Computer);
+    assert.equal(typeof mac.weight, 'string');
+    assert.equal(typeof mac.cpu, 'string');
+    assert.equal(typeof mac.videocard, 'string');
   });
 });
