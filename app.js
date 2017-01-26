@@ -1,30 +1,23 @@
-it("should create instance of Object", function() {
-    // BEGIN (write your solution here)
- function Computer(weight, cpu, videocard) {
-       this.weight = "weight";
-         this.cpu = "cpu";
-         this.videocard = "videocard";
-         var mycomp = new Computer();
-       return mycomp(weight, cpu, videocard);
- }
-   var Intel = function() {
-     weight.Intel = this.weight;
-     cpu.Intel = this.cpu;
-     videocard.Intel = this.videocard;
-     var mac = new Intel();
+/* global require describe it */
 
-   if (mac instanceof Computer)
-   console.log ("true");
-  
-    // END
+var assert = require("assert");
 
-  var mac = new Computer();
+describe("Reducing", function() {
+  it("reduces array", function() {
+    var a = [1,2,3,4,5];
 
-    assert.equal(typeof Computer, 'function');
-    assert.notEqual(mac instanceof Computer, true);
-    assert.notEqual(Object.getPrototypeOf(mac), Computer);
-    assert.equal(typeof mac.weight, 'string');
-    assert.equal(typeof mac.cpu, 'string');
-    assert.equal(typeof mac.videocard, 'string');
+    function multiplication(a, b){
+      return a * b;
+    }
+
+    function solution(){
+      // BEGIN (write your solution here)
+     var factorial = a.reduce (multiplication, a[0]);
+     return factorial;
+      // END
+    }
+
+    assert.equal(solution(), 120);
+
   });
 });
