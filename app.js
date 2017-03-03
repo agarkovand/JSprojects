@@ -3,11 +3,10 @@
 
 //function makeSortArray () {
 function makeArrayConsecutive2(statues) {
- statues.sort(function compareNumeric(a,b) {return b-a;}); 
-var result, summ;
-summ === 0;
-for (i = 0; i < statues.length; i++) {
-summ = summ + (statues[i] - statues[i+1]);
+ var arr = statues.sort(function compareNumeric(a,b) {return b-a;});
+var summ = 0;
+for (i = 0; i < (arr.length - 1); i++) {
+summ = summ + ((arr[i] - arr[i+1]) - 1);
 }
- return summ;
+return summ;
 }
