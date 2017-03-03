@@ -1,22 +1,19 @@
-/* global require describe it */
+//Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional statues to be able to accomplish that. 
+//Help him figure out the minimum number of additional statues needed.//
 
-var assert = require("assert");
+//function makeSortArray () {
+function makeArrayConsecutive2(statues) {
+  var arr = statues();
+  function makeSortArray () {
+ //var arr = statues();
+ return arr.sort(function compareNumeric(a,b) {return b-a;}); 
+}
+var result, summ;
+summ === 0;
+for (i = 0; i <= arr.length; i++) {
+ result = arr[i] - arr[i+1]; 
+ summ = summ + result;
+}
+alert (result);
 
-describe("Pushing", function() {
-  it("generates array", function() {
-    var arr = [];
-      arr[0] = 1;
-          arr.push(arr[0]);
-    for (var i = 1; i <= 10; i++) {
-      // BEGIN (write your solution here)
-           arr[i] = arr[0] + i;
-            arr.push(arr[i]);
-         }
-alert (arr);
-  
-      // END
-    }
-
-    assert.deepEqual(arr, [1,2,3,4,5,6,7,8,9,10]);
-  });
-});
+makeArrayConsecutive2( [5, 6, 2, 8] );
