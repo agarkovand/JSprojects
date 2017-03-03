@@ -3,13 +3,12 @@
 
 //function makeSortArray () {
 function makeArrayConsecutive2(statues) {
-  function makeSortArray() {
- return statues.sort(function compareNumeric(a,b) {return b-a;}); 
-}
+ statues.sort(function compareNumeric(a,b) {return b-a;}); 
 var result, summ;
 summ === 0;
-for (i = 0; i <= statues.length; i++) {
+for (i = 0; i <= (statues.length - 1); i++) {
  result = statues[i] - statues[i+1]; 
 summ = summ + result;
+}
 }
 alert (summ);
