@@ -6,9 +6,8 @@ function makeArrayConsecutive2(statues) {
  statues.sort(function compareNumeric(a,b) {return b-a;}); 
 var result, summ;
 summ === 0;
-for (i = 0; i <= (statues.length - 1); i++) {
- result = statues[i] - statues[i+1]; 
-summ = summ + result;
+for (i = 0; i < statues.length; i++) {
+summ = summ + (statues[i] - statues[i+1]);
 }
+ return summ;
 }
-alert (summ);
